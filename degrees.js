@@ -1,6 +1,6 @@
 (function() {
     var httpRequest;
-    document.getElementById("button").onclick = function() { makeRequest('my_degrees.json');
+    document.getElementById("button").onclick = function() { makeRequest('https://tschurder0518.github.io/cs601_hw5_oleary/my_degrees.json');
 };
 
 function makeRequest(url) {
