@@ -9,19 +9,17 @@ function makeRequest(url) {
         alert('Error: Unable to create an XMLHTTP instance');
         return false;
     }
-    httpRequest.onreadystatechange = tableContents();
+    httpRequest.onreadystatechange = (e) => {
+        if (httpRequest.readyState === XMLHttpRequest.DONE) {
+            if (httpRequest.status === 200) {
+                document.write(httpRequest.responseText);
+            } else {
+                alert("There was a problem with the request");
+            }
+        };
 
     httpRequest.open('GET', url);
     httpRequest.send();
 }
 
-function tableContents() {
-    if (httpRequest.readyState === XMLHttpRequest.DONE) {
-        if (httpRequest.status === 200) {
-            document.write(httpRequest.responseText);
-        } else {
-            alert("There was a problem with the request");
-        }
-    }
-}
 })();
