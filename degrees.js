@@ -22,4 +22,4 @@ function makeRequest(url) {
     httpRequest.send();
 }
 
-})();
+}})();
