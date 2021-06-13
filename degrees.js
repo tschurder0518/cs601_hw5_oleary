@@ -1,6 +1,6 @@
 (function() {
     var httpRequest;
-    document.getElementById("button").onclick = function() { makeRequest('my_degrees.json')
+    document.getElementById("button").onclick = function() { makeRequest('my_degrees.json');
 };
 
 function makeRequest(url) {
