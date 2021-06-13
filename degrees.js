@@ -9,7 +9,7 @@ function makeRequest(url) {
         alert('Error: Unable to create an XMLHTTP instance');
         return false;
     }
-    httpRequest.onreadystatechange = tableContents;
+    httpRequest.onreadystatechange = tableContents();
 
     httpRequest.open('GET', url);
     httpRequest.send();
