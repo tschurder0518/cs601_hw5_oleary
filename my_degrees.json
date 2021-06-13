@@ -1,0 +1,24 @@
+{"my_degrees": [
+    {"degree": {
+        "school": "University of Central Missouri",
+        "major": "Instrumental Music Education",
+        "type": "BME",
+        "year": 2011
+        }
+    },
+    {"degree": {
+        "school": "University of Kansas",
+        "major": "Information Technology",
+        "type": "MS",
+        "year": 2020
+        }
+    },
+    {"degree": {
+        "school": "Boston University",
+        "major": "Software Development",
+        "type": "MS",
+        "year": 2021
+        }
+    }
+]
+}
