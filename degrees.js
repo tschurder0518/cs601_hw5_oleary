@@ -14,21 +14,18 @@ function loadJson() {
         }
     }
 }
-
 function loadTable(httpInfo) {
     jsonInfo = JSON.parse(httpInfo.responseText);
     var degreeTable = "<tr><th>School</th><th>Major</th><th>Degree Type</th><th>Year Complete</th></tr>";
     let text = "<table border = '1'>"
     text += "<tr><th>School</th><th>Major</th><th>Degree Type</th><th>Year Complete</th></tr>";
-    text += "<tr><td>" + jsonInfo.degrees[0].degree.school + "</td>";
-    text += "<td>" + jsonInfo.degrees[0].degree.major + "</td>";
-    text += "<td>" + jsonInfo.degrees[0].degree.type + "</td>";
-    text += "<td>" + jsonInfo.degrees[0].degree.year + "</td></tr>";
-    text += "<tr><td>" + jsonInfo.degrees[1].degree.school + "</td></tr>";
-    text += "<tr><td>" + jsonInfo.degrees[2].degree.school + "</td></tr>";
+    for (let i = 0; i < 3; i++) {
+        text += "<tr><td>" + jsonInfo.degrees[i].degree.school + "</td>";
+        text += "<td>" + jsonInfo.degrees[i].degree.major + "</td>";
+        text += "<td>" + jsonInfo.degrees[i].degree.type + "</td>";
+        text += "<td>" + jsonInfo.degrees[i].degree.year + "</td></tr>";
+    }
 
     text += "</table>"
-
     document.write(degreeTable + text);
 }
-
