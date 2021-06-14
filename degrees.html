@@ -20,7 +20,11 @@
         Http.send();
 
         Http.onreadystatechange = (e) => {
-            console.log(Http.responseText);
+            if (Http.readyState == 4 && Http.status == 200) {
+                console.log(Http.responseText);
+            } else {
+                alert("Error with the request");
+            }
         }
       }
     </script>
