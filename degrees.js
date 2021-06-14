@@ -19,10 +19,9 @@ function loadTable(httpInfo) {
     var parsed = JSON.parse(httpInfo.responseText);
     var degreeTable = "<tr><th>School</th><th>Major</th><th>Degree Type</th><th>Year Complete</th></tr>";
     
+    
     for(var k in parsed) {
-        if (parsed[k] instanceof Object) {
-            printValues(parsed[k]);
-        } else {
+        if (parsed.hasOwnProperty(k)) {
             document.write(parsed[k] + "<br>");
         }
     }
