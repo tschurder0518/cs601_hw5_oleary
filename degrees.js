@@ -21,7 +21,7 @@ function loadTable(httpInfo) {
     var degreeTable = "<tr><th>School</th><th>Major</th><th>Degree Type</th><th>Year Complete</th></tr>";
     
     var pageContent = '';
-    for (var i=0; i < jsonInfo.degrees.length; i++) {
+    for (var i=0; i < jsonInfo.length; i++) {
         pageContent += '<tr>';
         pageContent += '<th>School</th>';
         pageContent += '<td>';
