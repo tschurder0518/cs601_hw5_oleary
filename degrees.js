@@ -7,7 +7,7 @@ function loadJson() {
     Http.onreadystatechange = (e) => {
         if (Http.readyState === XMLHttpRequest.DONE) {
             if (Http.status === 200) {
-                console.log(Http.responseText);
+                loadTable(Http);
             } else {
                 alert("Error with the request");
             }
@@ -15,3 +15,7 @@ function loadJson() {
     }
 }
 
+function loadTable(httpInfo) {
+    var jsonInfo = httpInfo.responseText;
+    document.write(jsonInfo);
+}
