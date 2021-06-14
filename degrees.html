@@ -1,3 +1,4 @@
+  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,6 @@
     <meta charset="UTF-8">
     <meta name="author" content="Tabitha O'Leary">
     <link href="style.css" rel="stylesheet">
-    <script src="degrees.js"></script>
 </head>
 <body>
     <div id="title">
@@ -17,6 +17,15 @@
     <div id="degreeContent">
 
     </div>
+    <script>
+        const Http = new XMLHttpRequest();
+        const url = 'https://tschurder0518.github.io/cs601_hw5_oleary/my_degrees.json';
+        Http.open("GET", url);
+        Http.send();
 
+        Http.onreadystatechange = (e) => {
+            console.log(Http.responseText);
+        }
+    </script>
 
 </body>
