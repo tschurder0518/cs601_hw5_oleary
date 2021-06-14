@@ -1,24 +1,24 @@
-table {
+#degreeTable {
     border-collapse: collapse;
     margin: 10px;
 }
 
-td {
+#degreeTable td {
     border: 1px solid;
     padding: 5px;
 }
 
-th {
+#degreeTable th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
     background-color: #C0C0C0;
 }
 
-tr:nth-child(even) {
+#degreeTable tr:nth-child(even) {
     background-color: #e9e8e8;
 }
 
-tr:hover {
+#degreeTable tr:hover {
     background-color: #ddd;
 }
