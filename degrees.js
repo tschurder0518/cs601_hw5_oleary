@@ -27,5 +27,5 @@ function loadTable(httpInfo) {
 
     text += "</table>"
 
-    document.getElementById("degreeTable").innerHTML = text;
+    document.write(text);
 }
