@@ -18,9 +18,8 @@
         const Http = new XMLHttpRequest();
         Http.onreadystatechange = function() {
             document.write(Http.responseText);
-        }
-        Http.open("GET", url);
-        Http.send();
+            Http.open("GET", url);
+            Http.send();
         }
     }
 </script>
