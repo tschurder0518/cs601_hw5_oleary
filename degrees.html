@@ -17,15 +17,23 @@
     <div id="degreeContent">
 
     </div>
-    <script>
-        const Http = new XMLHttpRequest();
-        const url = 'https://tschurder0518.github.io/cs601_hw5_oleary/my_degrees.json';
+<script>
+    (function() {
+        const Http;
+        document.getElementById("button").onclick = function()
+            { makeRequest('https://tschurder0518.github.io/cs601_hw5_oleary/my_degrees.json'); };
+    
+    function makeRequest(url) {
+        Http = new XMLHttpRequest();
         Http.open("GET", url);
         Http.send();
 
         Http.onreadystatechange = (e) => {
             console.log(Http.responseText);
         }
-    </script>
+    }
+    
+    })
+</script>
 
 </body>
