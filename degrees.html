@@ -11,16 +11,16 @@
     <div id="title">
         <h1>O'Leary College Degree's</h1>
     </div>
-    <button id="button" onclick="loadJson()">View Degrees</button>
+    <button id="button">View Degrees</button>
     <script>
-    function loadJson() {
         const Http = new XMLHttpRequest();
-        const Url = "https://tschurder0518.github.io/cs601_hw5_oleary/my_degrees.json";
-        Http.onreadystatechange = function() {
+        const url = 'https://tschurder0518.github.io/cs601_hw5_oleary/my_degrees.json';
+        Http.open("GET", url);
+        Http.send();
+
+        Http.onreadystatechange = (e) => {
             console.log(Http.responseText);
-            Http.open("GET", url);
-            Http.send();
         }
-    }
     </script>
+
 </body>
