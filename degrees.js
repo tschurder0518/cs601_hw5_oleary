@@ -16,7 +16,7 @@ function loadJson() {
 }
 function loadTable(httpInfo) {
     jsonInfo = JSON.parse(httpInfo.responseText);
-    let text = "<table border='1' border-collapse='collapse'>"
+    let text = "<table border='1'>"
     text += "<tr><th>School</th><th>Major</th><th>Degree Type</th><th>Year Complete</th></tr>";
     for (let i = 0; i < 3; i++) {
         text += "<tr><td>" + jsonInfo.degrees[i].degree.school + "</td>";
