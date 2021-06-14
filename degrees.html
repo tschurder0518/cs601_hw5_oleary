@@ -17,9 +17,8 @@
     function loadJson(url) {
         const Http = new XMLHttpRequest();
         Http.onreadystatechange = function() {
-            if (Http.readyState == 4 && Http.status == 200) {
-                document.write(Http.responseText);
-            }
+            document.write(Http.responseText);
+        }
         Http.open("GET", url);
         Http.send();
         }
