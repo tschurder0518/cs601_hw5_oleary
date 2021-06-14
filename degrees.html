@@ -12,30 +12,22 @@
         <h1>O'Leary College Degree's</h1>
     </div>
     <div id=submitButtonDiv>
-        <button id="button">View Degrees</button>
+        <button id="button" onclick="loadJson('https://tschurder0518.github.io/cs601_hw5_oleary/my_degrees.json')">View Degrees</button>
     </div>
     <div id="degreeContent">
 
     </div>
 <script>
-    (function() {
-        var Http;
-        document.getElementById("button").onclick = function()
-            { makeRequest('https://tschurder0518.github.io/cs601_hw5_oleary/my_degrees.json'); };
-    
-    function makeRequest(url) {
-        Http = new XMLHttpRequest();
-
-        Http.onreadystatechange = tableContents;
+    function loadJson(url) {
+        const Http = new XMLHttpRequest();
+        Http.onreadystatechange = function() {
+            if (Http.readyState == 4 && Http.status == 200) {
+                document.write(Http.responseText);
+            }
         Http.open("GET", url);
         Http.send();
-
-        function tableContents() {
-            console.log(Http.responseText);
         }
     }
-    
-    })
 </script>
 
 </body>
