@@ -25,11 +25,13 @@
     
     function makeRequest(url) {
         Http = new XMLHttpRequest();
+
+        Http.onreadystatechange = tableContents;
         Http.open("GET", url);
         Http.send();
 
-        Http.onreadystatechange = (e) => {
-            console.log(Http.responseText);
+        function tableContents() {
+            document.write(Http.responseText);
         }
     }
     
