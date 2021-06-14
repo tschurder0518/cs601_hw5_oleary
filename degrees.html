@@ -13,20 +13,22 @@
     </div>
     <button type="button" onclick="loadJson()" id="button">View Degrees</button>
     <script>
-      function loadJson() {
-        const Http = new XMLHttpRequest();
-        const url = 'https://tschurder0518.github.io/cs601_hw5_oleary/my_degrees.json';
-        Http.open("GET", url);
-        Http.send();
+        function loadJson() {
+          const Http = new XMLHttpRequest();
+          const url = 'https://tschurder0518.github.io/cs601_hw5_oleary/my_degrees.json';
+          Http.open("GET", url);
+          Http.send();
 
-        Http.onreadystatechange = (e) => {
-            if (Http.readyState == 4 && Http.status == 200) {
-                console.log(Http.responseText);
-            } else {
-                alert("Error with the request");
-            }
+          Http.onreadystatechange = (e) => {
+              if (Http.readyState === XMLHttpRequest.DONE) {
+                if (Http.status === 200) {
+                    console.log(Http.responseText);
+                } else {
+                    alert("Error with the request");
+                }
+              }
+          }
         }
-      }
-    </script>
+      </script>
 
 </body>
