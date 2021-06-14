@@ -20,9 +20,11 @@ function loadTable(httpInfo) {
     document.write(jsonInfo.degrees[0].degree.school);
     var degreeTable = "<tr><th>School</th><th>Major</th><th>Degree Type</th><th>Year Complete</th></tr>";
     let text = "<table border = '1'>"
-    for (let x in jsonInfo) {
-        text += "<tr><td>" + jsonInfo.degrees[x].degree.school + "</td></tr>";
-    }
+
+    text += "<tr><td>" + jsonInfo.degrees[0].degree.school + "</td></tr>";
+    text += "<tr><td>" + jsonInfo.degrees[1].degree.school + "</td></tr>";
+    text += "<tr><td>" + jsonInfo.degrees[2].degree.school + "</td></tr>";
+
     text += "</table>"
 
     document.getElementById("degreeTable").innerHTML = text;
