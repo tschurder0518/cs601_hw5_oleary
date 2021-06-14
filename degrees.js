@@ -19,7 +19,14 @@ function loadTable(httpInfo) {
     var jsonInfo = httpInfo.responseText;
     var parsed = JSON.parse(jsonInfo);
     var degreeTable = "<tr><th>School</th><th>Major</th><th>Degree Type</th><th>Year Complete</th></tr>";
-    
-    var degrees = parsed[0].degree[0];
-    document.write(degrees.school);
+    var pageContent = '';
+    for (var i=0; i < parsed.degrees.length; i++) {
+        pageContent += '<tr>';
+        pageContent += '<th>School</th>';
+        pageContent += '<td>';
+        pageContent += 'parsed.degrees[i].school';
+        pageContent += '</td>';
+        pageContent += '</tr>';
+    }
+    document.getElementById("degreeTable").innerHTML = pageContent;
 }
