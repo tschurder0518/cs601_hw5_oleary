@@ -1,0 +1,17 @@
+function loadJson() {
+    const Http = new XMLHttpRequest();
+    const url = 'https://tschurder0518.github.io/cs601_hw5_oleary/my_degrees.json';
+    Http.open("GET", url);
+    Http.send();
+
+    Http.onreadystatechange = (e) => {
+        if (Http.readyState === XMLHttpRequest.DONE) {
+            if (Http.status === 200) {
+                console.log(Http.responseText);
+            } else {
+                alert("Error with the request");
+            }
+        }
+    }
+}
+
