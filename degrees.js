@@ -17,7 +17,7 @@ function loadJson() {
 
 function loadTable(httpInfo) {
     var jsonInfo = httpInfo.responseText;
-    document.write(jsonInfo.degrees[0].degree.school;
+    document.write(jsonInfo.degrees[0].degree.school);
 //     var parsed = JSON.parse(jsonInfo);
 //     var degreeTable = "<tr><th>School</th><th>Major</th><th>Degree Type</th><th>Year Complete</th></tr>";
 //     var pageContent = '';
