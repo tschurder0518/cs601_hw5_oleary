@@ -19,5 +19,5 @@ function loadTable(httpInfo) {
     var parsed = JSON.parse(httpInfo.responseText);
     var degreeTable = "<tr><th>School</th><th>Major</th><th>Degree Type</th><th>Year Complete</th></tr>";
     
-    document.write(parsed.degree);
+    document.write(parsed.my_degrees[1]);
 }
