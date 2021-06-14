@@ -12,7 +12,7 @@
         <h1>O'Leary College Degree's</h1>
     </div>
     <button id="button" onclick="loadJson()">View Degrees</button>
-
+    <script>
     function loadJson() {
         const Http = new XMLHttpRequest();
         const Url = "https://tschurder0518.github.io/cs601_hw5_oleary/my_degrees.json";
@@ -22,5 +22,5 @@
             Http.send();
         }
     }
-
+    </script>
 </body>
