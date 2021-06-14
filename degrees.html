@@ -1,4 +1,3 @@
-  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,29 +5,18 @@
     <meta charset="UTF-8">
     <meta name="author" content="Tabitha O'Leary">
     <link href="style.css" rel="stylesheet">
+    <script src="degrees.js"></script>
 </head>
 <body>
     <div id="title">
         <h1>O'Leary College Degree's</h1>
     </div>
-    <button type="button" onclick="loadJson()" id="button">View Degrees</button>
-    <script>
-        function loadJson() {
-          const Http = new XMLHttpRequest();
-          const url = 'https://tschurder0518.github.io/cs601_hw5_oleary/my_degrees.json';
-          Http.open("GET", url);
-          Http.send();
+    <div id=submitButtonDiv>
+        <button type="button" onclick="loadJson()" id="button">View Degrees</button>
+    </div>
+    <div id="degreeContent">
 
-          Http.onreadystatechange = (e) => {
-              if (Http.readyState === XMLHttpRequest.DONE) {
-                if (Http.status === 200) {
-                    console.log(Http.responseText);
-                } else {
-                    alert("Error with the request");
-                }
-              }
-          }
-        }
-      </script>
+    </div>
+
 
 </body>
