@@ -18,15 +18,17 @@ function loadJson() {
 function loadTable(httpInfo) {
     var jsonInfo = httpInfo.responseText;
     var parsed = JSON.parse(jsonInfo);
-    var degreeTable = "<tr><th>School</th><th>Major</th><th>Degree Type</th><th>Year Complete</th></tr>";
-    var pageContent = '';
-    for (var i=0; i < parsed.degrees.length; i++) {
-        pageContent += '<tr>';
-        pageContent += '<th>School</th>';
-        pageContent += '<td>';
-        pageContent += parsed[i].degree.school;
-        pageContent += '</td>';
-        pageContent += '</tr>';
-    }
-    document.getElementById("degreeTable").innerHTML = pageContent;
+    document.write(parsed);
+//     var parsed = JSON.parse(jsonInfo);
+//     var degreeTable = "<tr><th>School</th><th>Major</th><th>Degree Type</th><th>Year Complete</th></tr>";
+//     var pageContent = '';
+//     for (var i=0; i < parsed.degrees.length; i++) {
+//         pageContent += '<tr>';
+//         pageContent += '<th>School</th>';
+//         pageContent += '<td>';
+//         pageContent += parsed[i].degree.school;
+//         pageContent += '</td>';
+//         pageContent += '</tr>';
+//     }
+//     document.getElementById("degreeTable").innerHTML = pageContent;
 }
