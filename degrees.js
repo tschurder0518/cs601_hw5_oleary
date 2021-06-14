@@ -19,8 +19,9 @@ function loadTable(httpInfo) {
     jsonInfo = JSON.parse(httpInfo.responseText);
     var degreeTable = "<tr><th>School</th><th>Major</th><th>Degree Type</th><th>Year Complete</th></tr>";
     let text = "<table border = '1'>"
-
+    text += "<tr><th>School</th><th>Major</th><th>Degree Type</th><th>Year Complete</th></tr>";
     text += "<tr><td>" + jsonInfo.degrees[0].degree.school + "</td></tr>";
+    text += "<td>" + jsonInfo.degrees[0].degree.major + "</td>";
     text += "<tr><td>" + jsonInfo.degrees[1].degree.school + "</td></tr>";
     text += "<tr><td>" + jsonInfo.degrees[2].degree.school + "</td></tr>";
 
@@ -28,3 +29,4 @@ function loadTable(httpInfo) {
 
     document.write(degreeTable + text);
 }
+
