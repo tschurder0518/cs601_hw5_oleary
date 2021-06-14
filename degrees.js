@@ -1,4 +1,5 @@
-window.onload = (function() {
+  
+window.onload = function() {
     var httpRequest;
     document.getElementById("button").onclick = function() { makeRequest('https://tschurder0518.github.io/cs601_hw5_oleary/my_degrees.json');
 };
@@ -22,4 +23,4 @@ function makeRequest(url) {
     httpRequest.send();
 }
 
-}})();
+}}
