@@ -16,13 +16,10 @@ function loadJson() {
 }
 
 function loadTable(httpInfo) {
-    var parsed = JSON.parse(httpInfo.responseText);
+    var jsonInfo = httpInfo.responseText;
+    var parsed = JSON.parse(jsonInfo);
     var degreeTable = "<tr><th>School</th><th>Major</th><th>Degree Type</th><th>Year Complete</th></tr>";
     
-    
-    for(var k in parsed) {
-        if (parsed.hasOwnProperty(k)) {
-            document.write(parsed[k] + "<br>");
-        }
-    }
+    var degree = parsed[0];
+    document.write(degree.school);
 }
