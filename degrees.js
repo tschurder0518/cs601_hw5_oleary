@@ -24,7 +24,7 @@ function loadTable(httpInfo) {
         pageContent += '<tr>';
         pageContent += '<th>School</th>';
         pageContent += '<td>';
-        pageContent += parsed.degrees[i].school;
+        pageContent += parsed[i].degree.school;
         pageContent += '</td>';
         pageContent += '</tr>';
     }
